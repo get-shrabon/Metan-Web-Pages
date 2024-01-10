@@ -28,7 +28,7 @@ const MetaverseSystem = () => {
           wallet. Setting up your network is very simple. You can buy land tiles
           with coins. You need to setup in your wallet.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-2">
           <a data-aos="fade-up" href="#" className="flex items-center">
             <button className="btn__bg rounded-s-md text-6xl px-10 py-4">
               <TbWorldStar />

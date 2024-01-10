@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const FeaturesBanner = () => {
     return (
-      <div className="py-32">
+      <div className="pt-32 pb-10">
         <div className="container mx-auto">
           <h5 className="text-white text-3xl font-bold text-center">
             Features

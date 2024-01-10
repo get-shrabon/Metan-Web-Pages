@@ -26,7 +26,7 @@ const AccessFuture = () => {
       <p data-aos="flip-up" className="text-center">
         Check out the best features.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 px-5 md:px-0">
         <div
           data-aos="zoom-in"
           className="border rounded border-[#ffffff32] access__card text-center"

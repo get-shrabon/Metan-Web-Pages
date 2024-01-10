@@ -7,7 +7,7 @@ import { LuMoveRight } from "react-icons/lu";
 
 const ContactFristCompo = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 px-5 md:px-0">
       <div className="container mx-auto font-OutFit">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           <div className="border-slate-300 border text-center text-white rounded-lg py-10 px-3">

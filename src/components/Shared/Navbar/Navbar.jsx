@@ -105,7 +105,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="sm-d-none">
+        <div className="hidden lg:flex">
           <div className="drawer mr-5">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">

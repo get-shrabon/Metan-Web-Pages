@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="w-full py-32 md:py-32  overflow-x-hidden flex items-center bg bg-cover bg-no-repeat bg-center">
       <div className="container mx-auto">
         <img
-          className="absolute md:top-20 w-[300px] 2xl:w-auto left-0 top-0 2xl:left-[80px] worth rotate__animate"
+          className="absolute md:top-20 w-[300px] lg:w-[300px] md:w-[100px] 2xl:w-auto left-0 top-0 md:left-10 lg:left-0 2xl:left-[80px] worth rotate__animate"
           src={worldImg}
           alt=""
         />

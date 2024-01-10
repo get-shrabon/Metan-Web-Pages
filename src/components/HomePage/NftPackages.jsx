@@ -29,7 +29,7 @@ const NftPackages = () => {
         src={weelImg}
         alt=""
       />
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 px-5 md:px-0 relative">
         <div className="nft__card overflow-hidden pb-10">
           <div className="h-full bg-slate-800 text-center rounded-t">
             <div className="bg-primary p-3 rounded-t text-center">
