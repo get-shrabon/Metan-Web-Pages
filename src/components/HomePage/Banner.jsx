@@ -7,13 +7,13 @@ const Banner = () => {
     <div className="w-full py-32 md:py-32  overflow-x-hidden flex items-center bg bg-cover bg-no-repeat bg-center">
       <div className="container mx-auto">
         <img
-          className="absolute md:top-20 w-[300px] lg:w-[300px] md:w-[100px] 2xl:w-auto left-0 top-0 md:left-10 lg:left-0 2xl:left-[80px] worth rotate__animate"
+          className="absolute md:top-20 w-[300px] lg:w-[270px] md:w-[100px] 2xl:w-auto left-0 top-0 md:left-10 lg:left-0 2xl:left-[80px] worth rotate__animate"
           src={worldImg}
           alt=""
         />
 
         <div className="grid banner__info sm:flex-row-reverse md:grid-cols-2 items-center">
-          <div className="mt-0 p-sm md:mt-10 2xl:mt-56">
+          <div className="mt-0 p-sm md:mt-28 2xl:mt-56">
             <h1 className="text-white mb-3 space-y-2 text-5xl font-semibold font-OutFit">
               Best Virtual 3D <br /> Land Selling Platform
             </h1>
@@ -27,7 +27,7 @@ const Banner = () => {
           </div>
           <div className="">
             <img
-              className=" mx-auto flip__animate object-cover"
+              className=" mx-auto flip__animate object-cover w-auto md:w-[80%] 2xl:w-auto"
               src={BannerImg}
               alt=""
             />

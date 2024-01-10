@@ -1,8 +1,8 @@
-import { useState } from "react";
+
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { LuPhoneCall } from "react-icons/lu";
 import Logo from "../../../assets/Express Life uk new logo file 01 1.png";
-import { IoMdClose } from "react-icons/io";
+
 import { TfiEmail } from "react-icons/tfi";
 import {
   FaFacebookF,
@@ -10,10 +10,9 @@ import {
   FaMapLocationDot,
   FaTwitter,
 } from "react-icons/fa6";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [cross, setCross] = useState(true);
   return (
     <div>
       <div className="navbar justify-between container mx-auto">
@@ -27,7 +26,7 @@ const Navbar = () => {
         </div>
 
         <div className=" hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          {/* <ul className="menu menu-horizontal px-1">
             <li>
               <NavLink className="nav__link" to="/">
                 Home
@@ -103,30 +102,100 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
+          </ul> */}
+
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <NavLink className="nav__link" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__link menu-dropdown">
+              About
+              <ul className="space-y-3 hidden-dropdown">
+                <li>
+                  <NavLink to="/aboutUs" className="nav__link">
+                    About Us
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/ourTeam">
+                    Our Team
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/privacyPolicy">
+                    Privacy Policy
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/termsCondition">
+                    Terms and Conditions
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+            <li className="nav__link menu-dropdown">
+              Features
+              <ul className="hidden-dropdown space-y-3 ">
+                <li>
+                  <NavLink className="nav__link" to="/features">
+                    Features
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/featuresDetails">
+                    Features Details
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/projects">
+                    Projects
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink className="nav__link" to="/projectsDetails">
+                    Projects Details
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <NavLink className="nav__link" to="/package">
+                Package
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/faq" className="nav__link">
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className="nav__link">
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
+
         <div className="hidden lg:flex">
+          {/* Side Bar Big Device */}
           <div className="drawer mr-5">
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
-              {/* Page content here */}
               <label
-                onClick={() => setCross(!cross)}
                 htmlFor="my-drawer"
                 className="text-3xl font-bold cursor-pointer text-[#D02EF0]"
               >
-                {cross ? (
-                  <HiMiniBars3CenterLeft />
-                ) : (
-                  <IoMdClose
-                    htmlFor="my-drawer"
-                    aria-label="close sidebar"
-                    className=""
-                  ></IoMdClose>
-                )}
+                <HiMiniBars3CenterLeft />
               </label>
             </div>
-            <div className="drawer-side w-[fit-content]">
+            <div className="drawer-side">
+              <label
+                htmlFor="my-drawer"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
               <div className="text-center p-4 w-96 min-h-full drawer__bg text-base-content">
                 <img className="w-52 mx-auto" src={Logo} alt="" />
                 <div className="mt-16 text-white font-OutFit space-y-5">
@@ -137,7 +206,7 @@ const Navbar = () => {
                     <LuPhoneCall />
                   </p>
                   <p className="text-xl">
-                    <a href="tel:07209264">07209264</a> <br />
+                    <a href="tel:07209264">07209264</a>
                   </p>
                   <p className="custom__bg__color p-7 mx-auto rounded text-5xl w-[fit-content] ">
                     <TfiEmail />
@@ -181,6 +250,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+
           <a className="btn__bg py-4 px-6 mr-3 rounded text-nowrap cursor-pointer font-OutFit">
             Login
           </a>
@@ -188,10 +258,11 @@ const Navbar = () => {
             Sign Up
           </a>
         </div>
+
+        {/* Side Bar Samll Device */}
         <div className="drawer justify-between lg:hidden">
           <input id="nav-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
-            {/* Page content here */}
             <label
               htmlFor="nav-drawer"
               className="text-3xl font-bold cursor-pointer text-[#D02EF0]"
@@ -282,6 +353,15 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
+
+              <div className="flex pt-5">
+                <a className="btn__bg py-4 px-6 mr-3 rounded text-nowrap cursor-pointer w-[fit-content] font-OutFit">
+                  Login
+                </a>
+                <a className="border border-[#d02ef0] py-4 text-white px-6 w-[fit-content] rounded text-nowrap cursor-pointer font-OutFit">
+                  Sign Up
+                </a>
+              </div>
             </ul>
           </div>
         </div>
